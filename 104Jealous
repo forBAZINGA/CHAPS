@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Comic Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      overflow-x: hidden;
+      user-select: none;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.body.addEventListener("contextmenu", e => e.preventDefault());
+      document.body.addEventListener("dragstart", e => e.preventDefault());
+
+      const imageLinks = [
+        "https://i.imgur.com/d9DWDbV.jpeg",
+        "https://i.imgur.com/x22XEFN.jpeg",
+                "https://i.imgur.com/N66h2qy.jpeg",
+                "https://i.imgur.com/phQNDzQ.jpeg",
+                "https://i.imgur.com/yC4j1r5.jpeg",
+                "https://i.imgur.com/wO8yFUQ.jpeg",
+                "https://i.imgur.com/5S1onVs.jpeg",
+                "https://i.imgur.com/YAtk1NM.jpeg",
+        "https://i.imgur.com/jxsBQsz.jpeg",
+        "https://i.imgur.com/KWkVus2.jpeg",
+        "https://i.imgur.com/86rGP9m.jpeg",
+        "https://i.imgur.com/Bxmkhk3.jpeg",
+        "https://i.imgur.com/8Gc5uXy.jpeg",
+        "https://i.imgur.com/cAVQzFQ.jpeg",
+        "https://i.imgur.com/iRJc4ga.jpeg",
+        "https://i.imgur.com/SMibFpG.jpeg",
+        "https://i.imgur.com/QB0vKNI.jpeg",
+        "https://i.imgur.com/N3Svmdb.jpeg",
+
+        "https://i.imgur.com/ThKU3FI.jpeg",
+        "https://i.imgur.com/42XL3c9.jpeg",
+        "https://i.imgur.com/JEK7c76.jpeg",
+        "https://i.imgur.com/8kvDB3U.jpeg",
+        "https://i.imgur.com/BAJoXpB.jpeg",
+        "https://i.imgur.com/GmIiwmC.jpeg",
+        "https://i.imgur.com/sVgtzv1.jpeg",
+        "https://i.imgur.com/MuisVoc.jpeg",
+        "https://i.imgur.com/NYw66L4.jpeg",
+        "https://i.imgur.com/TD7Z6ME.jpeg",
+
+        "https://i.imgur.com/76C6927.jpeg",
+        "https://i.imgur.com/x61XHtP.jpeg",
+        "https://i.imgur.com/w5ntfdk.jpeg",
+        "https://i.imgur.com/nFIDxkC.jpeg",
+        "https://i.imgur.com/4KMFWWv.jpeg",
+        "https://i.imgur.com/liRlgU1.jpeg",
+        "https://i.imgur.com/v9ovSFB.jpeg",
+        "https://i.imgur.com/q2HFz9j.jpeg",
+        "https://i.imgur.com/XAlzJfa.jpeg",
+        "https://i.imgur.com/l8BQOVv.jpeg",
+
+        "https://i.imgur.com/I6NvyDX.jpeg",
+        "https://i.imgur.com/NpyrBKO.jpeg",
+        "https://i.imgur.com/ErFV5jF.jpeg",
+        "https://i.imgur.com/16gXEWR.jpeg",
+        "https://i.imgur.com/OSZU0Yj.jpeg",
+        "https://i.imgur.com/D7dke3k.jpeg",
+        "https://i.imgur.com/cOPD6Nm.jpeg",
+        "https://i.imgur.com/1j7gKJo.jpeg",
+        "https://i.imgur.com/UutWF09.jpeg",
+
+        "https://i.imgur.com/pYJcDJc.jpeg",
+        "https://i.imgur.com/vzKifGu.jpeg",
+        "https://i.imgur.com/WCn0x7Z.jpeg",
+        "https://i.imgur.com/DtTnntE.jpeg",
+        "https://i.imgur.com/R2MYLiv.jpeg",
+        "https://i.imgur.com/tItPcJA.jpeg",
+        "https://i.imgur.com/6xw8OvT.jpeg",
+        "https://i.imgur.com/JtNdAyM.jpeg",
+        "https://i.imgur.com/iP3FoOL.jpeg",
+        "https://i.imgur.com/4n4W7cA.jpeg",
+
+        "https://i.imgur.com/C1R1VZx.jpeg",
+        "https://i.imgur.com/BzSp03f.jpeg",
+        "https://i.imgur.com/JwLBBGa.jpeg",
+        "https://i.imgur.com/aYuNU3e.jpeg",
+        "https://i.imgur.com/4462hqi.jpeg",
+        "https://i.imgur.com/GqJhxID.jpeg",
+        "https://i.imgur.com/kUXvijm.jpeg",
+        "https://i.imgur.com/moQ05Fq.jpeg",
+        "https://i.imgur.com/w75i5QL.jpeg"
+
+
+      ];
+
+      const imageContainer = document.body;
+      imageLinks.forEach(link => {
+        const img = document.createElement('img');
+        img.src = link;
+        imageContainer.appendChild(img);
+      });
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
