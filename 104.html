@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Comic Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      overflow-x: hidden;
+      user-select: none;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.body.addEventListener("contextmenu", e => e.preventDefault());
+      document.body.addEventListener("dragstart", e => e.preventDefault());
+    });
+  </script>
+</head>
+<body>
+  <!-- Images 1 to 68 -->
+  <script>
+    const imageContainer = document.body;
+    for (let i = 1; i <= 68; i++) {
+      const img = document.createElement('img');
+      let filenameNum = i;
+      if (i === 10) continue; // Skip missing image 10 if not available
+      if (i < 10) {
+        filenameNum = `0${i}`;
+      }
+      img.src = `https://i.postimg.cc/${getPath(i)}/20211105215247-fe51fb07848f4c661b8d645b1f5d4a70-IMAG01-${filenameNum}.jpg`;
+      imageContainer.appendChild(img);
+    }
+
+    function getPath(i) {
+      const map = {
+        1: 'RZJxfhxH',
+        2: 'TYYRyTPV',
+        3: '25vmp6HD',
+        4: 'bJ9hJ5cV',
+        5: 'nrVtQ1nF',
+        6: 'QMLGqDjn',
+        7: 'X7z0pFmW',
+        8: 'mDRv0SzY',
+        9: '3J6PKh0J',
+        11: 'T1NB5Mk0',
+        12: 'gcgCT8Yh',
+        13: 'wT3C8MvG',
+        14: 'hjSYCP6M',
+        15: 'WbDHYyYR',
+        16: 'SQ1Pr4r7',
+        17: 'fT6gGv1V',
+        18: 'xdQpC1fY',
+        19: 'qRb1jc8M',
+        20: 'missing',
+        21: '1YJ1xXcL',
+        22: '0NHRXMCz',
+        23: 'g0PfK7r9',
+        24: 'dVMzcv7x',
+        25: 'XNZ7Jf5n',
+        26: 'J0nN5pCV',
+        27: 'jmS2FVPL',
+        28: 'RVP8LynL',
+        29: 'Bnx1bw2W',
+        30: 'V6X6tfPv',
+        31: 'wBPCnFHL',
+        32: 'Rf9vRm2s',
+        33: 'KZyTxTvc',
+        34: 'Y0V0rkZ3',
+        35: 'kXZmFv2C',
+        36: 'JGT5BBRg',
+        37: 'r0z0bvwT',
+        38: 'GmBPL5f6',
+        39: '3xDG1ctZ',
+        40: 'Pj3s1Pqh',
+        41: 'WyHzX2Bv',
+        42: '3RQY59MZ',
+        43: 'MGTnkHCh',
+        44: 'tTMSJz2R',
+        45: 'pXKjSBgD',
+        46: 'r0Z4bdjs',
+        47: 'kgS1cyFM',
+        48: 'jLgdKJXq',
+        49: 'XGpfvDpZ',
+        50: 'xx0nB6z5',
+        51: 'wTBRjbWc',
+        52: 'mqKY4jbT',
+        53: 'KcqstLkX',
+        54: 'zvxrrrCK',
+        55: 'hzTn8NFq',
+        56: '6LrMQPQF',
+        57: 'vj1HZpjK',
+        58: 'DMv4xLVz',
+        59: 'xJZdNmxv',
+        60: 'W1R8qCHm',
+        61: 'V0Wtx4n9',
+        62: 'bvmczxnp',
+        63: 'j5TT8t4h',
+        64: 'ZVmchB0s',
+        65: '9Q6GxvNt',
+        66: 't7Sb9t1z',
+        67: 'YcY3zdgh',
+        68: 'vH3gRn6X',
+      };
+      return map[i] || 'missing-path';
+    }
+  </script>
+</body>
+</html>
